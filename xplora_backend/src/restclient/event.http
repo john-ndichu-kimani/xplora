@@ -1,0 +1,22 @@
+### CREATE TOUR EVENT
+POST http://localhost:3002/event/create     
+Content-Type: application/json
+
+{
+    "destination": "Naivasha",
+    "duration": "10",
+    "price": "5000",
+    "type": "Boat Riding",
+    "imageUrl":"https://th.bing.com/th/id/OIP.kAzFYqKZlkKxSDAX11s9FQHaFj?rs=1&pid=ImgDetMain"
+}
+
+###VIEW ALL EVENTS
+GET http://localhost:3002/event/all
+Content-Type: application/json
+
+###soft delete event
+
+DELETE http://localhost:3002/event/delete/d023d5d8-0d4a-4ab4-9fc0-358817c298ad
+Content-Type: : application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjE3Nzg5NTY4LWQ5MmUtNGRhZi1iOWZjLTA5MDBlZTJlMjMzNiIsIm5hbWUiOiJhZG1pbiBEb2UiLCJlbWFpbCI6ImFkbWluLmRvZUBleGFtcGxlLmNvbSIsIm1vYmlsZSI6IjA3MTE2OTk1NDkiLCJyb2xlIjoiYWRtaW4iLCJwcm9maWxlSW1hZ2VVcmwiOiJodHRwczovL2V4YW1wbGUuY29tL3Byb2ZpbGUtaW1hZ2UuanBnIiwiaWF0IjoxNzE5MDU0NjExLCJleHAiOjE3MTkwNTU1MTF9.aaSARbt33YParA38sLWIuUmdqRbPdT49d1o4INVq2QU
+

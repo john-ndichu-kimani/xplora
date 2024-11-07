@@ -1,0 +1,13 @@
+### BOOK EVENT
+POST http://localhost:3002/booking/add
+Content-Type: application/json  
+
+{
+  "userId": "304425d8-4127-4c4e-81e9-f2a9d23a3942",
+  "eventId": "b4561a2a-13a7-4fec-a2f0-767fc2fa1029"
+}
+
+
+###VIEW BOOKINGS
+GET http://localhost:3002/booking/all
+Content-Type: application/json

@@ -1,0 +1,27 @@
+### REGISTER USER
+POST http://localhost:3002/auth/register
+Content-Type: application/json
+
+{
+  "name": "nadmin",
+  "email": "na@gmail.com",
+  "mobile": "0322734658",
+  "password": "@Na234567"
+ 
+}
+
+
+### LOGIN
+POST http://localhost:3002/auth/login 
+Content-Type: application/json
+
+{
+    "email": "sa@gmail.com",
+    "password": "@Sa234567"
+}
+
+
+### Check token details
+GET http://localhost:3002/auth/check-details /
+Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjcyZWRlMTBmLTI5MTItNDk2Ni1hYmRjLWEzOTBlOWE2Y2FjYyIsIm5hbWUiOiJKb2huIE5kaWNodSIsImVtYWlsIjoibmRpY2h1QGdtYWlsLmNvbSIsIm1vYmlsZSI6IjA3MTE2OTk1MjMiLCJyb2xlIjoiYWRtaW4iLCJwcm9maWxlSW1hZ2VVcmwiOm51bGwsImlhdCI6MTcxOTI1NDY2OSwiZXhwIjoxNzE5MjU2NDY5fQ.63cxiVkE3rMvEtZl3iMxbNeHlHbQKV6UCaXUQY4nJ04

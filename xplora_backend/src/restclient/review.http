@@ -1,0 +1,17 @@
+### CREATE REVIEW
+POST http://localhost:3002/review/create
+Content-Type: application/json
+
+
+{
+  "userId":"304425d8-4127-4c4e-81e9-f2a9d23a3942",
+  "eventId":"d023d5d8-0d4a-4ab4-9fc0-358817c298ad",
+  "rating": 5, 
+  "comment": "Great event!", 
+  "date": "2024-06-22T12:00:00Z"
+}
+
+
+###VIEW ALL REVIEWS
+GET http://localhost:3002/review/all/
+Content-Type: application/json

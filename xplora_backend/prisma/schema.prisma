@@ -1,0 +1,55 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlserver"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id              String   @id @default(uuid())
+  name            String
+  email           String   @unique
+  mobile          String   @unique
+  password        String
+  role            String?  @default("user")
+  profileImageUrl String?  @default("https://img.freepik.com/free-vector/illustration-businessman_53876-5856.jpg?t=st=1719249110~exp=1719252710~hmac=ef12cebeb3a2b9041c3c229d156698f553a94599eca3c852dceb82ae46e1bb17&w=740") // added default avatar image path for user
+  bookings        Booking[]
+  reviews         Review[]
+}
+
+model Event {
+  id          String    @id @default(uuid())
+  destination String
+  duration    Int
+  price       Float
+  type        String
+  isActive    Boolean?  @default(true)
+  imageUrl    String?   // Added field
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
+  reviews     Review[]
+  bookings    Booking[]
+}
+
+model Booking {
+  id          String   @id @default(uuid())
+  userId      String
+  eventId     String
+  bookingDate DateTime?
+  user        User     @relation(fields: [userId], references: [id])
+  event       Event    @relation(fields: [eventId], references: [id])
+}
+
+model Review {
+  id       String   @id @default(uuid())
+  userId   String 
+  eventId  String
+  rating   Int
+  comment  String
+  date     DateTime @default(now())
+  user     User     @relation(fields: [userId], references: [id])
+  event    Event    @relation(fields: [eventId], references: [id])
+}

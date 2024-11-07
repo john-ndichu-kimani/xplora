@@ -1,0 +1,28 @@
+
+
+### Update user
+PUT http://localhost:3002/user/update
+Content-Type: application/json
+
+{
+    "name":"johndoe",
+    "email":"johndoe@yopmail.com",
+    "mobile":"+2543637399",
+    "password":"12345678", 
+}
+
+
+### VIEW ALL USERS
+GET http://localhost:3002/user/all
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImQzZGIzZTMyLTM1MDQtNGNkNy1hYjdiLTBlMjc0MWQ4MGM3ZCIsIm5hbWUiOiJKYW1lcyIsImVtYWlsIjoiamFtZXNAZ21haWwuY29tIiwibW9iaWxlIjoiMDExNjczNDc2NyIsInJvbGUiOiJhZG1pbiIsInByb2ZpbGVJbWFnZVVybCI6bnVsbCwiaWF0IjoxNzE5MjQ3NTUxLCJleHAiOjE3MTkyNDkzNTF9.8nkg0RHis7s1oXHIHgRZGjwUUbXPBPnpDLmQYKY-mw4
+
+
+### VIEW One user
+GET http://localhost:3002/user/single/6891db9a-8e6e-46f9-b2d3-98f994a45e54
+Content-Type: application/json
+
+
+### DELETE user
+DELETE http://localhost:3002/user/delete/e9f0f96b-50f4-4c5b-b783-3057d712a749
+Content-Type: application/json
